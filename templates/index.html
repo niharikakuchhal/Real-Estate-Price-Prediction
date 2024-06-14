@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        
+        <div class="form-container">
+            <h1 class="title">Real Estate Price Prediction</h1>
+            <form id="prediction-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <select id="city" name="city" required onchange="fetchLocations()">
+                        <option value="">Select City</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <select id="location" name="location" required>
+                        <option value="">Select Location</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sqft">Square Feet:</label>
+                    <input type="number" id="sqft" name="sqft" step="any" required>
+                </div>
+                <div class="form-group">
+                    <label for="bath">Bathrooms:</label>
+                    <select id="bath" name="bath" required>
+                        <option value="">Select Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bhk">Bedrooms:</label>
+                    <select id="bhk" name="bhk" required>
+                        <option value="">Select Option</option>
+                        <option value="1">1 BHK</option>
+                        <option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option>
+                        <option value="4">4 BHK</option>
+                        <option value="5">5 BHK</option>
+                        <option value="6">6 BHK</option>
+                        <option value="7">7 BHK</option>
+                        <option value="8">8 BHK</option>
+                        <option value="9">9 BHK</option>
+                        <option value="10">10 BHK</option>
+                        <option value="11">11 BHK</option>
+                        <option value="12">12 BHK</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" onclick="submitForm()">Predict</button>
+            </form>
+
+            <div id="prediction-result" class="result">
+                <div id="loading-spinner" class="spinner" style="display: none;"></div>
+                <h2 id="result-text"></h2>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
