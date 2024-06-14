@@ -25,9 +25,7 @@ This project is a web application for predicting real estate prices in Bangalore
 3. Install the required packages:
    ```bash
       pip install -r requirements.txt # add requirements
-
-
-
+   
 ## Usage
 1. Run the Flask application:
    ```bash
@@ -36,9 +34,9 @@ This project is a web application for predicting real estate prices in Bangalore
 2. Open your web browser and go to http://127.0.0.1:5000/.
 
 ## Features
-  Predict real estate prices in Bangalore and Chennai
-  User-friendly interface
-  Interactive data visualization
+  1. Predict real estate prices in Bangalore and Chennai
+  2. User-friendly interface
+  3. Interactive data visualization
 
 ## Dataset
 The datasets for Bangalore and Chennai real estate prices are included in the data directory.
