@@ -23,13 +23,15 @@ This project is a web application for predicting real estate prices in Bangalore
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 3. Install the required packages:
-  ```bash
-  pip install -r requirements.txt
+   ```bash
+      pip install -r requirements.txt # add requirements
+
+
 
 ## Usage
 1. Run the Flask application:
-  ```bash
-  python app.py
+   ```bash
+      python app.py
 
 2. Open your web browser and go to http://127.0.0.1:5000/.
 
@@ -45,8 +47,8 @@ The datasets for Bangalore and Chennai real estate prices are included in the da
   1. Fork the repository.
   2. Create a new branch (git checkout -b feature-branch).
   3. Make your changes and commit them (git commit -m 'Add some feature').
-` 4. Push to the branch (git push origin feature-branch).
-` 5. Open a pull request.
+  4. Push to the branch (git push origin feature-branch).
+  5. Open a pull request.
 
 ## License
 
@@ -54,7 +56,7 @@ The datasets for Bangalore and Chennai real estate prices are included in the da
 
 - **requirements.txt**: Make sure you have a `requirements.txt` file listing all necessary Python packages. You can generate one using:
   ```bash
-  pip freeze > requirements.txt
+     pip freeze > requirements.txt
 
 
 
