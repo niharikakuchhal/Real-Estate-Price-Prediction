@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchCoordinates = (city) => {
         const address = `${city}`;
-        const apiKey = '4b563cb3d358707d5eb2e095a9e68ca9';
+        const apiKey = '*********************************';
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(address)}&appid=${apiKey}`;
 
         fetch(apiUrl)
